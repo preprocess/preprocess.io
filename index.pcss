@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-editor {
+    background-color: rgb(40, 48, 53);
+}
+
+.text-editor {
+    font-size: 1rem;
+}
+
+.code-default {
+    color: rgb(192, 204, 219);
+}
+
+.code-line-number {
+    width: 2rem;
+    margin-right: 1rem;
+    margin-left: -0.5rem;
+    text-align: right;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: hsla(0, 0%, 100%, 0.25);
+}
+
+.code-comment {
+    color: hsla(0, 0%, 100%, 0.25);
+}
+
+.code-variable {
+    color: rgb(192, 204, 219);
+}
+
+.code-symbol {
+    color: rgb(212, 133, 106);
+}
+
+.code-string {
+    color: rgb(132, 196, 206);
+}
+
+.code-name {
+    color: rgb(67, 181, 179);
+}
+
+.line {
+    clear: left;
+}
+
+.editor *::selection {
+    background: #43b5b3;
+}
+
+.editor *::-moz-selection {
+    background: #43b5b3;
+}
+
+.segment {
+    @apply inline-block;
+}

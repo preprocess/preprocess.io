@@ -5,6 +5,7 @@
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
+        "react-resize-observer": "^1.1.1",
         "react-router-dom": "^5.0.0",
         "react-typing-animation": "^1.6.2"
     },
@@ -16,8 +17,8 @@
         "tailwindcss": "^1.0.3"
     },
     "scripts": {
-        "start": "parcel index.html --cache-dir .cache --out-dir .build --target browser",
-        "build": "parcel build index.html --cache-dir .cache --out-dir .build --target browser",
+        "start": "NODE_ENV=development && parcel index.html --cache-dir .cache --out-dir .build --target browser",
+        "build": "NODE_ENV=production && parcel build index.html --cache-dir .cache --out-dir .build --target browser",
         "deploy": "rsync --delete --recursive .build/* forge@new.preprocess.io:/home/forge/new.preprocess.io"
     },
     "author": "Christopher Pitt <cgpitt@gmail.com>",

@@ -7,7 +7,10 @@ class Home extends Component {
     state = { example: undefined, busy: false }
 
     componentDidMount() {
-        this.onRandomExample()
+        setTimeout(() => {
+            // give the user a change to recognise the editor...
+            this.onRandomExample()
+        }, 1000)
     }
 
     onRandomExample = () => {
