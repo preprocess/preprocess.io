@@ -18,7 +18,7 @@
     "scripts": {
         "start": "parcel index.html --cache-dir .cache --out-dir .build --target browser",
         "build": "parcel build index.html --cache-dir .cache --out-dir .build --target browser",
-        "deploy": "scp .build/* forge@new.preprocess.io:/home/forge/new.preprocess.io"
+        "deploy": "rsync --delete --recursive .build/* forge@new.preprocess.io:/home/forge/new.preprocess.io"
     },
     "author": "Christopher Pitt <cgpitt@gmail.com>",
     "license": "MIT"
