@@ -1,12 +1,16 @@
 import React from "react"
-import { Editor } from "./editor"
-import { ShortClosures } from "./examples"
+import { Router, Route } from "react-router-dom"
+import { createHashHistory } from "history"
+import { Home, ShortClosures } from "./pages"
+
+const history = createHashHistory()
 
 const App = () => {
     return (
-        <Editor>
-            <ShortClosures />
-        </Editor>
+        <Router history={history}>
+            <Route path="/" exact component={Home} />
+            <Route path="/short-closures" exact component={ShortClosures} />
+        </Router>
     )
 }
 
