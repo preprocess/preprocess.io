@@ -1,0 +1,17 @@
+{
+    "name": "new.preprocess.io",
+    "version": "1.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "parcel-bundler": "^1.12.3",
+        "sass": "^1.20.3"
+    },
+    "scripts": {
+        "start": "parcel index.html --cache-dir .cache --out-dir .build --target browser",
+        "build": "parcel build index.html --cache-dir .cache --out-dir .build --target browser",
+        "deploy": "scp .build/* forge@new.preprocess.io:/home/forge/new.preprocess.io"
+    },
+    "author": "Christopher Pitt <cgpitt@gmail.com>",
+    "license": "MIT"
+}
