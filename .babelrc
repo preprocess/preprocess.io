@@ -1,7 +1,10 @@
 {
     "presets": [
-        ["@babel/preset-env", {
-            "browserslist": "> 0.25%, not dead"
-        }]
+        [
+            "@babel/preset-env",
+            {
+                "browserslist": "> 0.25%, not dead"
+            }
+        ]
     ]
 }
