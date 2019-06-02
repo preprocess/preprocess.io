@@ -1,7 +1,7 @@
-import React from "react"
+import React, { cloneElement } from "react"
 
-const Editor = ({ children }) => {
-    return <div>{children}</div>
+const Editor = ({ children, onFinished }) => {
+    return <div>{children && cloneElement(children, { onFinished })}</div>
 }
 
 export { Editor }
