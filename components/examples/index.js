@@ -1,6 +1,6 @@
+import { Phpx } from "./phpx"
 import { ShortClosures } from "./short-closures"
-import { PhpxHtml } from "./phpx-html"
 
-export const examples = [ShortClosures, PhpxHtml]
+export const examples = [Phpx, ShortClosures]
 
-export { ShortClosures, PhpxHtml }
+export { Phpx, ShortClosures }

@@ -1,4 +1,4 @@
 export { Home } from "./home"
-export { ShortClosures } from "./short-closures"
 export { Missing } from "./missing"
-export { PhpxHtml } from "./phpx-html"
+export { Phpx } from "./phpx"
+export { ShortClosures } from "./short-closures"

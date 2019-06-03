@@ -1,6 +1,10 @@
 export default {
     typing: {
         hideCursor: true,
-        speed: 25,
+        speed: 75,
+    },
+    compiling: {
+        delay: 1000,
+        speed: 5,
     },
 }

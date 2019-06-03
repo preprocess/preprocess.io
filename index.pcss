@@ -10,21 +10,16 @@
     font-size: 1rem;
 }
 
-.code-default {
+.code-literal {
     color: rgb(192, 204, 219);
 }
 
 .code-line-number {
+    @apply no-select;
     width: 2rem;
     margin-right: 1rem;
     margin-left: -0.5rem;
     text-align: right;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     color: hsla(0, 0%, 100%, 0.25);
 }
 
@@ -36,7 +31,7 @@
     color: rgb(192, 204, 219);
 }
 
-.code-symbol {
+.code-token {
     color: rgb(212, 133, 106);
 }
 
@@ -48,18 +43,63 @@
     color: rgb(67, 181, 179);
 }
 
+.code-keyword {
+    color: rgb(82, 152, 196);
+}
+
+.editor {
+    @apply subpixel-antialiased;
+    @apply px-5;
+    @apply pt-4;
+    @apply rounded;
+    @apply shadow-md;
+    @apply font-mono;
+    @apply text-sm;
+    @apply code-literal;
+    @apply bg-editor;
+    @apply text-editor;
+    @apply overflow-hidden;
+    line-height: 1.675;
+}
+
 .line {
+    display: block;
+    width: 100%;
     clear: left;
 }
 
-.editor *::selection {
-    background: #43b5b3;
+.code-selection {
+    background-color: #43b5b3;
+    text-decoration: none;
+    text-shadow: none;
+    outline: none;
 }
 
-.editor *::-moz-selection {
-    background: #43b5b3;
+.editor .line::selection {
+    @apply code-selection;
+}
+
+.editor .line::-moz-selection {
+    @apply code-selection;
+}
+
+.editor .segment::selection {
+    @apply code-selection;
+}
+
+.editor .segment::-moz-selection {
+    @apply code-selection;
 }
 
 .segment {
     @apply inline-block;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

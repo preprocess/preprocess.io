@@ -53,7 +53,7 @@ class Home extends Component {
                         <Link to="/short-closures">short closures documentation</Link>
                     </li>
                     <li>
-                        <Link to="/phpx-html">phpx html documentation</Link>
+                        <Link to="/phpx">phpx documentation</Link>
                     </li>
                 </ol>
             </div>
