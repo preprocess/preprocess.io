@@ -48,6 +48,7 @@
 }
 
 .editor {
+    @apply relative;
     @apply subpixel-antialiased;
     @apply px-5;
     @apply pt-4;
@@ -59,6 +60,7 @@
     @apply bg-editor;
     @apply text-editor;
     @apply overflow-hidden;
+    z-index: 4;
     line-height: 1.675;
 }
 
@@ -104,26 +106,43 @@
     user-select: none;
 }
 
-.home-header-outer {
+.home-banner {
     @apply absolute;
-    @apply inset-0;
-    @apply overflow-hidden;
-    z-index: 2;
-}
-
-.home-header-inner {
-    @apply absolute;
-    @apply inset-0;
-    transform: rotate(-10deg);
+    bottom: 30%;
+    transform: rotate(-4deg);
     transform-origin: 0% 100%;
-    width: 120%;
-    height: 200px;
+    width: 300%;
+    margin-left: -150%;
+    height: 10000px;
     background: rgb(66, 153, 225);
-    background: linear-gradient(0deg, rgba(66, 153, 225, 1) 0%, rgba(144, 205, 244, 1) 100%);
+    background: linear-gradient(0deg, rgba(66, 153, 225, 1) 0%, rgba(99, 179, 237, 1) 100%);
 }
 
 @screen md {
-    .home-header-inner {
+    .home-banner {
         height: 500px;
     }
+}
+
+button {
+    @apply rounded;
+    @apply border-blue-400;
+    @apply bg-blue-300;
+    @apply border-b;
+    @apply px-4;
+    @apply py-2;
+    @apply text-gray-100;
+    @apply flex;
+    @apply flex-row;
+    @apply items-center;
+    @apply justify-center;
+    text-shadow: 0px 0px 1px #63b3ed;
+}
+
+button:disabled {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;
 }
