@@ -4,17 +4,22 @@ import { Editor } from "../editor"
 import { examples } from "../examples"
 
 class Home extends Component {
-    state = { example: undefined, busy: false }
+    timer = undefined
+
+    state = { example: undefined, isBusy: false }
 
     componentDidMount() {
-        setTimeout(() => {
+        this.timer = setTimeout(() => {
             // give the user a change to recognise the editor...
             this.onRandomExample()
-        }, 1000)
+        }, 500)
     }
 
     onRandomExample = () => {
         const { example } = this.state
+        const { timer } = this
+
+        clearTimeout(timer)
 
         let next = example
 
@@ -23,32 +28,28 @@ class Home extends Component {
         }
 
         this.setState(() => ({
-            busy: true,
+            isBusy: true,
             example: next,
         }))
     }
 
     onFinishedExample = () => {
         this.setState(() => ({
-            busy: false,
+            isBusy: false,
         }))
     }
 
     render() {
-        const { example, busy } = this.state
+        const { example, isBusy } = this.state
         const { onRandomExample, onFinishedExample } = this
 
         return (
             <div>
-                <div>
+                <div className="hidden md:flex flex-col items-center">
                     <Editor onFinished={onFinishedExample}>{example && createElement(example)}</Editor>
+                    <div>{isBusy ? "busy" : <button onClick={onRandomExample}>show more</button>}</div>
                 </div>
-                <div>
-                    <button onClick={onRandomExample} disabled={busy}>
-                        show more
-                    </button>
-                </div>
-                <ol>
+                <ol className="mt-8">
                     <li>
                         <Link to="/short-closures">short closures documentation</Link>
                     </li>

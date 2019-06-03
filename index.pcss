@@ -103,3 +103,27 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+.home-header-outer {
+    @apply absolute;
+    @apply inset-0;
+    @apply overflow-hidden;
+    z-index: 2;
+}
+
+.home-header-inner {
+    @apply absolute;
+    @apply inset-0;
+    transform: rotate(-10deg);
+    transform-origin: 0% 100%;
+    width: 120%;
+    height: 200px;
+    background: rgb(66, 153, 225);
+    background: linear-gradient(0deg, rgba(66, 153, 225, 1) 0%, rgba(144, 205, 244, 1) 100%);
+}
+
+@screen md {
+    .home-header-inner {
+        height: 500px;
+    }
+}
