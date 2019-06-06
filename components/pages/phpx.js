@@ -11,7 +11,7 @@ const Phpx = () => {
                     <PhpxExample />
                 </Editor>
             </Banner>
-            <Container style={{ zIndex: 4 }}>phpx documentation</Container>
+            <Container>&nbsp;</Container>
         </Fragment>
     )
 }
