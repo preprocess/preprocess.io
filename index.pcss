@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-editor {
-    background-color: rgb(40, 48, 53);
-}
-
 .text-editor {
     font-size: 1rem;
 }
@@ -57,11 +53,17 @@
     @apply font-mono;
     @apply text-sm;
     @apply code-literal;
-    @apply bg-editor;
     @apply text-editor;
     @apply overflow-hidden;
+    @apply w-full;
+    background-color: rgb(40, 48, 53);
     z-index: 4;
     line-height: 1.675;
+    height: 12rem;
+}
+
+.editor.show-more {
+    height: 18rem;
 }
 
 .line {
@@ -106,22 +108,50 @@
     user-select: none;
 }
 
-.home-banner {
+.background {
     @apply absolute;
-    bottom: 30%;
+    bottom: 0;
     transform: rotate(-4deg);
     transform-origin: 0% 100%;
-    width: 300%;
-    margin-left: -150%;
+    width: calc(100vw + 200px);
+    margin-left: -100px;
     height: 10000px;
     background: rgb(66, 153, 225);
     background: linear-gradient(0deg, rgba(66, 153, 225, 1) 0%, rgba(99, 179, 237, 1) 100%);
 }
 
-@screen md {
-    .home-banner {
-        height: 500px;
-    }
+.header-title {
+    @apply font-semibold;
+    @apply text-gray-100;
+    @apply relative;
+    z-index: 6;
+}
+
+.header-subtitle {
+    @apply font-semibold;
+    @apply text-gray-100;
+    @apply relative;
+    z-index: 6;
+}
+
+.shadow-background-blue-600 {
+    box-shadow: 10px 0 0 #3182ce, -10px 0 0 #3182ce;
+}
+
+.home-banner .header-title {
+    font-size: 5rem;
+}
+
+.home-banner .header-subtitle {
+    font-size: 3rem;
+}
+
+.banner .header-title {
+    font-size: 4rem;
+}
+
+.banner .header-subtitle {
+    font-size: 2rem;
 }
 
 button {

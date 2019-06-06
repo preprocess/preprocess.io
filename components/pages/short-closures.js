@@ -1,7 +1,8 @@
 import React from "react"
+import { Container } from "./atoms"
 
 const ShortClosures = () => {
-    return <div>short closures documentation</div>
+    return <Container>short closures documentation</Container>
 }
 
 export { ShortClosures }

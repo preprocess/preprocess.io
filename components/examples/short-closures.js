@@ -67,7 +67,10 @@ const ShortClosures = ({ onFinished }) => (
         </Line>
         <Line number={12}>
             <Tab />
+            <Keyword>fn</Keyword>
+            <Literal>(</Literal>
             <Variable>$next</Variable>
+            <Literal>)</Literal>
             &nbsp;
             <Token>=></Token>
             <Variable>&nbsp;$next</Variable>

@@ -1,5 +1,9 @@
 import React from "react"
 
-const Keyword = ({ children, className }) => <span className={`segment code-keyword ${className}`}>{children}</span>
+const Keyword = ({ children, className, ...rest }) => (
+    <span className={`segment code-keyword ${className ? className : ""}`} {...rest}>
+        {children}
+    </span>
+)
 
 export { Keyword }

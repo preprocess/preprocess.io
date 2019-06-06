@@ -1,7 +1,17 @@
 import React, { cloneElement, createRef, Component } from "react"
+import PropTypes from "prop-types"
 
 class Editor extends Component {
+    static propTypes = {
+        showMore: PropTypes.bool,
+    }
+
+    static defaultProps = {
+        showMore: true,
+    }
+
     ref = createRef()
+
     height = null
 
     componentDidMount() {
@@ -20,11 +30,11 @@ class Editor extends Component {
     }
 
     render() {
-        const { children, onFinished } = this.props
+        const { children, showMore, onFinished } = this.props
         const { ref } = this
 
         return (
-            <div className="flex flex-col editor" style={{ width: "36rem", height: "18rem" }}>
+            <div className={`flex flex-col editor ${showMore ? "show-more" : ""}`}>
                 <div className="flex flex-row mb-4">
                     <span className="h-3 w-3 bg-red-500 rounded-full" />
                     <span className="ml-2 h-3 w-3 bg-orange-300 rounded-full" />

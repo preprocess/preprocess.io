@@ -1,5 +1,9 @@
 import React from "react"
 
-const Tab = ({ className }) => <div className={`segment ${className}`}>&nbsp;&nbsp;</div>
+const Tab = ({ className, ...rest }) => (
+    <div className={`segment ${className ? className : ""}`} {...rest}>
+        &nbsp;&nbsp;
+    </div>
+)
 
 export { Tab }
