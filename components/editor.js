@@ -42,7 +42,7 @@ class Editor extends Component {
                 </div>
                 <div
                     ref={ref}
-                    className="flex flex-col whitespace-no-wrap overflow-y-scroll pb-4 relative"
+                    className="flex flex-col whitespace-no-wrap overflow-y-scroll overflow-x-hidden pb-4 relative"
                     style={{ width: "150%" }}
                 >
                     {children && cloneElement(children, { onFinished })}

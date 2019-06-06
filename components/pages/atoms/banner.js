@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { Container } from "./container"
 
 const Banner = ({ showTagline, renderTagline, children }) => (
-    <div className="flex relative banner">
+    <div className="flex relative banner w-full overflow-x-hidden">
         <div className="background" />
         <Container>
             <div className="flex flex-col lg:flex-row w-full relative">
@@ -20,7 +20,7 @@ const Banner = ({ showTagline, renderTagline, children }) => (
                         </div>
                     )}
                 </div>
-                <div className="hidden mt-8 lg:mt-0 sm:flex sm:w-full lg:w-1/2 mr-4 flex-col items-center">
+                <div className="flex mt-8 lg:mt-0 sm:w-full lg:w-1/2 mr-4 flex-col items-center overflow-x-hidden">
                     {children}
                 </div>
             </div>
