@@ -6,9 +6,9 @@ import { Container } from "./container"
 const Banner = ({ showTagline, renderTagline, children }) => (
     <div className="flex w-full relative banner overflow-x-hidden">
         <div className="background" />
-        <Container className="max-w-5xl">
+        <Container className="max-w-6xl">
             <div className="flex flex-col lg:flex-row w-full justify-end lg:justify-start items-start lg:items-center">
-                <div className="flex flex-col flex-shrink lg:w-1/2 lg:pr-32 leading-tight">
+                <div className="flex flex-col flex-shrink lg:w-2/5 lg:pr-32 leading-tight">
                     <div className="header-title">
                         <Link to="/" className="bg-blue-600 shadow-background-blue-600 py-1">
                             Pre.
@@ -20,7 +20,7 @@ const Banner = ({ showTagline, renderTagline, children }) => (
                         </div>
                     )}
                 </div>
-                <div className="flex mt-8 lg:mt-0 w-full lg:w-1/2 pb-8 lg:pb-0 flex-col items-center overflow-x-hidden">
+                <div className="flex mt-8 lg:mt-0 w-full lg:w-3/5 pb-8 lg:pb-0 flex-col items-center overflow-x-hidden">
                     {children}
                 </div>
             </div>

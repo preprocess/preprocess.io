@@ -84,7 +84,7 @@ class Home extends Component {
                 </Container>
                 <div className="flex w-full relative pt-0 lg:pt-8 mt-0 lg:-mt-8">
                     <div className="separator-1" />
-                    <Container className="my-8 sm:my-16 lg:my-32 max-w-5xl">
+                    <Container className="my-8 sm:my-16 lg:my-32">
                         <dl className="macros">
                             <Link to="/short-closures" className="macro">
                                 <dt>short closures</dt>
