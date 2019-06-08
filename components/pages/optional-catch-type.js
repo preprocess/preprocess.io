@@ -1,14 +1,13 @@
 import React, { Fragment } from "react"
 import { Editor } from "../editor"
-import { Phpx as PhpxExample } from "../examples"
 import { Banner, Container } from "./atoms"
 
-const Phpx = () => {
+const OptionalCatchType = () => {
     return (
         <Fragment>
-            <Banner renderTagline={() => "Phpx"}>
+            <Banner renderTagline={() => "Optional Catch Type"}>
                 <Editor showMore={false}>
-                    <PhpxExample />
+                    <span>coming soon</span>
                 </Editor>
             </Banner>
             <Container className="pb-d">This documentation is incomplete.</Container>
@@ -16,4 +15,4 @@ const Phpx = () => {
     )
 }
 
-export { Phpx }
+export { OptionalCatchType }

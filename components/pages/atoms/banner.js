@@ -10,13 +10,13 @@ const Banner = ({ showTagline, renderTagline, children }) => (
             <div className="flex flex-col lg:flex-row w-full justify-end lg:justify-start items-start lg:items-center">
                 <div className="flex flex-col flex-shrink lg:w-2/5 lg:pr-32 leading-tight">
                     <div className="header-title">
-                        <Link to="/" className="bg-blue-600 shadow-background-blue-600 py-1">
+                        <Link to="/" className="bg-blue-600 shadow-background-blue py-1">
                             Pre.
                         </Link>
                     </div>
                     {showTagline && (
                         <div className="header-subtitle">
-                            <span className="bg-blue-600 shadow-background-blue-600 py-1">{renderTagline()}</span>
+                            <span className="bg-blue-600 shadow-background-blue py-1">{renderTagline()}</span>
                         </div>
                     )}
                 </div>

@@ -63,7 +63,7 @@ const macros = [
 ]
 
 const Macros = () => (
-    <dl className="flex flex-row flex-wrap mt-4">
+    <dl className="flex flex-row flex-wrap">
         {macros.map(macro => (
             <Link
                 to={macro.link}

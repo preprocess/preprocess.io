@@ -1,11 +1,10 @@
 import React, { Component, Fragment, createElement } from "react"
-import { Link } from "react-router-dom"
 import Markdown from "react-markdown"
 import { Editor } from "../editor"
 import { examples } from "../examples"
 import { HourglassHalf, Magic } from "../icons"
 import { Banner, Container, Macros } from "./atoms"
-import { HomeFooter, HomeIntro, HomeSyntax } from "../../markdown"
+import { HomeFooter, HomeIntro, HomeSyntax } from "../../markdown/pages"
 
 class Home extends Component {
     timer = undefined
@@ -68,14 +67,14 @@ class Home extends Component {
                 <Container>
                     <Markdown source={HomeIntro} />
                 </Container>
-                <div className="flex w-full relative bg-gray-300">
+                <div className="flex w-full relative bg-gray-300 mt-d mb-d pt-d pb-d">
                     <div className="corner white top right" />
                     <div className="corner white bottom right" />
                     <Container>
                         <Macros />
                     </Container>
                 </div>
-                <div className="flex w-full relative bg-gray-100 pb-32">
+                <div className="flex w-full relative bg-gray-100 pb-d">
                     <Container>
                         <Markdown source={HomeSyntax} />
                         <hr />

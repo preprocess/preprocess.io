@@ -1,3 +1,5 @@
 export { content as HomeFooter } from "./home-footer.md"
 export { content as HomeIntro } from "./home-intro.md"
 export { content as HomeSyntax } from "./home-syntax.md"
+export { content as ShortClosuresCaveats } from "./short-closures-caveats.md"
+export { content as ShortClosuresIntro } from "./short-closures-intro.md"
