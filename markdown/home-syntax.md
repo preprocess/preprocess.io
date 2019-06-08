@@ -1,0 +1,1 @@
+The process for creating new macros can be quite involved. Over time, I'd like to document that. For now, feel free to **reach out to me on twitter** with questions and look through existing macros for tips.
