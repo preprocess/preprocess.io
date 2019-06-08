@@ -63,11 +63,17 @@ const macros = [
 ]
 
 const Macros = () => (
-    <dl className="macros">
+    <dl className="flex flex-row flex-wrap mt-4">
         {macros.map(macro => (
-            <Link to={macro.link} key={macro.link} className="macro">
-                <dt>{macro.term}</dt>
-                <dd>{macro.definition}</dd>
+            <Link
+                to={macro.link}
+                key={macro.link}
+                className="w-full sm:w-1/2 flex flex-col mb-2 no-underline pr-4 pb-2"
+            >
+                <dt className="flex text-3xl text-gray-100 bg-green-500 px-2 py-1 overflow-hidden">{macro.term}</dt>
+                <dd className="flex flex-grow items-center font-mono text-base text-gray-200 bg-green-600 whitespace-pre px-2 py-1 overflow-hidden">
+                    {macro.definition}
+                </dd>
             </Link>
         ))}
     </dl>

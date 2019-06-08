@@ -65,12 +65,10 @@ class Home extends Component {
                         )}
                     </button>
                 </Banner>
-                <div className="my-16 lg:mb-0">
-                    <Container>
-                        <Markdown source={HomeIntro} />
-                    </Container>
-                </div>
-                <div className="flex w-full relative bg-gray-300 py-16 lg:py-32">
+                <Container>
+                    <Markdown source={HomeIntro} />
+                </Container>
+                <div className="flex w-full relative bg-gray-300">
                     <div className="corner white top right" />
                     <div className="corner white bottom right" />
                     <Container>

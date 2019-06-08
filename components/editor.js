@@ -4,10 +4,12 @@ import PropTypes from "prop-types"
 class Editor extends Component {
     static propTypes = {
         showMore: PropTypes.bool,
+        onFinished: PropTypes.func,
     }
 
     static defaultProps = {
         showMore: true,
+        onFinished: () => undefined,
     }
 
     ref = createRef()
