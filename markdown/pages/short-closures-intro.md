@@ -15,7 +15,7 @@ composer require pre/short-closures
 This is how you use it ↓
 
 ```
-$closure = fn($arg) => print arg;
+$fn = fn($arg) => print arg;
 ```
 
 ---
@@ -23,7 +23,7 @@ $closure = fn($arg) => print arg;
 This is what it compiles to ↓
 
 ```
-$closure = function($arg) {
+$fn = function($arg) {
     print $arg;
 };
 ```
