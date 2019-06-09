@@ -31,7 +31,7 @@ The macro solves both of these problems ↓
 ```
 $items = ["apple", "pear"];
 
-$fn = fn($append) =>  {
+$fn = fn($append) => {
     $items[] = $append;
     sort($items);
 }
