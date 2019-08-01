@@ -52,7 +52,7 @@ const macros = [
         link: "/deferred",
         term: "deferred",
         definition:
-            '$file = fopen("./names.txt");\ndefer fclose("./names.txt");\n\nwhile (!feof($file)) {\n  // read the file!\n}',
+            '$handle = fopen("./names.txt");\ndefer fclose($handle);\n\nwhile (!feof($handle)) {\n  // read the file!\n}',
     },
     {
         link: "/class-accessors",
