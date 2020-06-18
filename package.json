@@ -13,7 +13,7 @@
         "@babel/core": "^7.4.5",
         "@babel/plugin-proposal-class-properties": "^7.4.4",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-        "parcel-bundler": "^1.12.3",
+        "parcel-bundler": "^1.12.4",
         "parcel-plugin-md-fm": "^0.3.0",
         "postcss-custom-properties": "^8.0.10",
         "postcss-nested": "^4.1.2",
@@ -23,7 +23,7 @@
     "scripts": {
         "start": "NODE_ENV=development && parcel index.html --cache-dir .cache --out-dir .build --target browser",
         "build": "NODE_ENV=production && rm -rf .build && parcel build index.html --cache-dir .cache --out-dir .build --target browser",
-        "deploy": "npm run build && rsync --delete --recursive .build/* forge@new.preprocess.io:/home/forge/new.preprocess.io"
+        "deploy": "npm run build && rsync --delete --recursive .build/* forge@preprocess.io:/home/forge/preprocess.io"
     },
     "author": "Christopher Pitt <cgpitt@gmail.com>",
     "license": "MIT"
